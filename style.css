@@ -72,6 +72,7 @@ body {
   max-width: 100%;
   padding-bottom: 40px;
   padding: 40px 20px 30px;
+  background-color: #fff;
 }
 
 .header img {
@@ -80,23 +81,44 @@ body {
 }
 
 .hero {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
   padding-bottom: 0;
   margin-bottom: 0;
+  width: 100%;
 }
 
-.hero-img{
+#hero-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
   background-image: url(/assets/hero.jpg);
   background-size: cover;
-  background-position: center;
-  padding: 5%;
-  justify-content: center;
   padding-top: 30%;
+  width: 100%;
+  display: block;
+}
 
-  /* height: 100%;
-  width: 100%; */
+.greenbox {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(50,122,105);
+  width: 90%;
+  height: 150%;
+  opacity: 90%;
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+}
+
+hr {
+  border-bottom: 1px solid #00945f;
+  width: 5.5%;
+  margin-top: 5px;
 }
 
 .btn {
@@ -114,17 +136,15 @@ body {
   text-align: center;
 }
 
-.heading-1 h2, .heading-4{
+.heading-1 h2, .heading-4 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #00945f;
 }
 
-.heading-1 h2{
+.heading-1 h2 {
   font-size: 2.1em;
   line-height: 2;
-  border-bottom: 1px solid #00945f;
-  border-bottom-width: 3px;
   text-align: center;
   padding-top: 15px;
 }
@@ -154,10 +174,19 @@ p {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  padding-top: 15px;
 }
 
 .product a {
   color: #759b24;
+}
+
+.products {
+  padding-top: 0;
+}
+
+.products hr {
+  margin-left: 47.5%;
 }
 
 .arrow {
@@ -169,8 +198,16 @@ p {
   -webkit-transform: rotate(-45deg);
 }
 
+.product {
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
 .product:nth-child(odd) {
   border-right: 1px solid #888;
+  border-width: 1px;
+  height: 50%;
   margin: 25px 20px 0 0;
   padding-right: 20px;
 }
@@ -195,7 +232,7 @@ p {
   background-color: #ebf7f5;
   font-size: small;
   font-weight: 100;
-  padding: 18px 50px;
+  padding: 20px 60px 35px 60px;
 }
 
 .officers {
@@ -253,7 +290,7 @@ figcaption {
 }
 
 footer {
-  border-top: 3px solid #00945f;
+  border-top: 2px solid #00945f;
 }
 
 .copyright {
@@ -272,3 +309,264 @@ footer {
   color: #000;
 }
 
+
+
+
+@media (max-width: 640px){
+  * {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+  }
+
+  header {
+    margin: 5% 40%;
+    text-align: center;
+  }
+
+  footer {
+    width: max-content;
+  }
+
+  section {
+    width: 640px;
+    margin-left: 15px;
+    padding-bottom: 0;
+  }
+
+  .header img {
+    width: 400px;
+    height: 40px;
+  }
+
+  #hero-wrapper {
+    width: 700px;
+  }
+
+  .hero {
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  .hero-img {
+    background-image: url(/assets/hero_mobile.jpg);
+    padding-top: 65%;
+    width: 100%;
+  }
+
+  .greenbox {
+    display: none;
+  }
+
+  .careers-features h2 {
+    line-height: 0;
+  }
+
+  .products h2 {
+    line-height: 1.1;
+  }
+
+  .heading-1 h2 {
+    font-size: 5.75em;
+    width: fit-content;
+    text-align: center;
+    padding-top: 75px;
+    margin-left: 0;
+    padding-bottom: 15px;
+  }
+
+  .heading-4 {
+    font-size: 1.75em;
+    line-height: 2;
+  }
+
+  hr {
+    border: none;
+    width: 25%;
+    padding-top: 1%;
+    padding-bottom: 0;
+    border-bottom: 4px solid #00945f;
+  }
+
+  p {
+    font-weight: 100;
+    font-size: 34px;
+    line-height: 2;
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+
+  .careers-feature {
+    padding-top: 10px;
+    padding-bottom: 5%;
+  }
+
+  .careers-features {
+    padding-bottom: 5%;
+  }
+
+  .careers-features hr {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .products hr {
+    margin-left: 38%;
+  }
+
+  .btn {
+    font-size: 50px;
+    font-weight: lighter;
+    letter-spacing: .2px;
+    height: 1.75em;
+    width: 8em;
+    text-align: center;
+  }
+
+  #products-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+  }
+
+  .heading-4 {
+    font-size: 4.5em;
+    line-height: 0;
+    margin-bottom: 35px;
+  }
+
+  .arrow {
+    padding: 10px;
+    border-width: 0 3px 3px 0;
+  }
+
+  .product:first-child {
+    padding-top: 0;
+  }
+
+  .product {
+    border-right: none;
+    border-bottom: 1px solid #888;
+    border-width: 1px;
+    height: .5%;
+    padding-top: 30px;
+  }
+
+  .product .product-text {
+    line-height: 1.75;
+  }
+
+  .product:nth-child(odd) {
+    border-right: none;
+  }
+
+  .product:last-child {
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .features-heading {
+    font-size: 42px;
+    line-height: 1.4;
+    font-weight: lighter;
+    padding: 40px 19px;
+    height: auto;
+  }
+
+  .features-text {
+    font-size: 34px;
+    padding: 20px 10px 20px 15px;
+    height: max-content;
+  }
+
+  #officers-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20%;
+  }
+
+  .officer {
+    height: max-content;
+    margin-bottom: 15%;
+  }
+
+  .officer img {
+    width: 375px;
+    height: 375px;
+  }
+
+  .officer:first-child {
+    padding-top: 25px;
+  }
+
+  .officer blockquote {
+    padding-right: 0;
+    margin-left: 0;
+    font-style: italic;
+    font-size: 34px;
+    width: 350px;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .officer:nth-child(even) blockquote {
+    justify-content: center;
+    margin-left: 0;
+    width: 400px;
+  }
+
+  blockquote:after {
+    content: "\201C";
+    font-size: 350px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #eee;
+    margin-left: -30px;
+    margin-top: -150px;
+    opacity: 70%;
+  }
+
+  figcaption {
+    font-size: 34px;
+    padding-top: 30px;
+    color: #00945f;
+    width: 350px;
+    text-align: center;
+  }
+
+  .copyright {
+    width: 640px;
+    padding: 20px 15px 30px 0;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 24px;
+  }
+
+  .copyright a {
+    text-decoration: underline;
+  }
+
+  .nav img {
+    width: 50%;
+    padding: 20px;
+    padding-left: 0;
+  }
+
+  .privacy {
+    font-weight: bold;
+    color: #000;
+    font-size: 24px;
+    padding-bottom: 25px;
+  }
+}
